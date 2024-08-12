@@ -6,11 +6,9 @@ function ProjectItem({ name, about, technologies }) {
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
-        {Array.isArray(technologies) ? (
-          technologies.map((tech, index) => <span key={index}>{tech}</span>)
-        ) : (
-          <span>No technologies specified</span>
-        )}
+        {technologies.map((technology, index) => (
+          <span key={index}>{technology}</span>
+        ))}
       </div>
     </div>
   );
